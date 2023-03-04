@@ -1,0 +1,17 @@
+# Disable index view
+Options -Indexes
+
+# Hide a specific file
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<FilesMatch "\.(jpg)$">
+Order Deny,Allow
+   Allow from all
+</FilesMatch>
+
+<Directory "/public/">
+     deny from all
+</Directory>
